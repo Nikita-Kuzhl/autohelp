@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Router  from "next/router";
 import Cart from "./CartButton";
 import styles from "../../styles/Header.module.scss";
 import Auth from "./AuthButton";
@@ -11,19 +11,20 @@ import {
 import MenuMobile from "./MenuMobile";
 
 let Links = [
-  { name: "Главная", link: "/asd", icon: <HomeIcon className="w-8 h-8" /> },
-  { name: "Услуги", link: "/", icon: <BookOpenIcon className="w-8 h-8" /> },
-  { name: "О нас", link: "/", icon: <MapIcon className="w-8 h-8" /> },
+  { name: "Главная", link: "/", icon: <HomeIcon className="w-8 h-8" /> },
+  { name: "Услуги", link: "/category", icon: <BookOpenIcon className="w-8 h-8" /> },
+  { name: "О нас", link: "/about", icon: <MapIcon className="w-8 h-8" /> },
 ];
 
 const Header = () => {
+  
   return (
     <header className={styles.header}>
       <div className={styles.navbar}>
         <div className={styles.logo}>Autohelp</div>
         <ul className={styles.nav}>
           {Links.map((item) => (
-            <a key={item.name} className={styles.item}>
+            <a onClick={()=>Router.push(item.link)} key={item.name} className={styles.item}>
               {item.name}
             </a>
           ))}

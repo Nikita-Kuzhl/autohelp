@@ -6,7 +6,15 @@ import Auth from "./AuthButton";
 import styles from "../../styles/Header.module.scss";
 import Cart from "./CartButton";
 
-const MenuMobile = (props) => {
+interface IProps{
+  links: {
+    name: string;
+    link: string;
+    icon: JSX.Element;
+}[]
+}
+
+const MenuMobile = (props:IProps) => {
   return (
     <Menu as="div" className="relative md:hidden">
       {({ open }) => (
@@ -22,8 +30,8 @@ const MenuMobile = (props) => {
             </Menu.Button>
           )}
           
-
-          <Menu.Items className="absolute right-0 mt-4  divide-y divide-dashed">
+          
+          <Menu.Items className="absolute right-0 mt-4 py-3  divide-y divide-dashed border-b-2 bg-white border-x-2 rounded-lg">
             {props.links.map((item) => (
               <Menu.Item as="div" key={item.name}>
                 {({ active }) => (

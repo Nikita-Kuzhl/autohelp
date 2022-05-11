@@ -1,16 +1,16 @@
 .header {
-  @apply w-full md:drop-shadow-lg fixed  left-0 md:p-5;
+  @apply w-full md:drop-shadow-lg  left-0 md:p-5 ;
 
   .navbar {
     @apply  flex  bg-white justify-between  py-4 px-7 md:px-10;
 
     .logo {
-      @apply font-bold text-3xl cursor-default  items-center  font-[EBGaramond];
+      @apply font-bold text-3xl cursor-auto  items-center  font-[EBGaramond];
     }
     .nav {
-      @apply md:flex hidden md:align-middle pt-1 flex-col md:flex-row text-center ;
+      @apply md:gap-12 md:flex hidden md:align-middle pt-1 flex-col md:flex-row text-center ;
       .item {
-        @apply md:ml-8 text-xl hover:scale-110 hover:text-gray-400 cursor-pointer duration-300;
+        @apply text-xl hover:scale-110 hover:text-gray-400 cursor-pointer duration-300;
       }
     }
     .user_action{

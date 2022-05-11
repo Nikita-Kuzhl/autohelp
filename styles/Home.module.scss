@@ -1,4 +1,4 @@
 .hero_pattern{
   background-image: url('/images/topography.svg');
-  @apply bg-repeat w-screen h-screen
+  @apply bg-repeat w-screen h-screen flex flex-col
 }

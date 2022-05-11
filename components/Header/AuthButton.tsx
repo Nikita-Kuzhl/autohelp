@@ -2,6 +2,7 @@ import React,{Fragment} from "react";
 import { LoginIcon, LogoutIcon, UserAddIcon, UserCircleIcon, UserIcon } from "@heroicons/react/outline";
 import styles from "../../styles/Header.module.scss";
 import { Menu, Transition } from "@headlessui/react";
+import Router  from "next/router";
 
 const Auth = () => {
   return (
@@ -28,11 +29,11 @@ const Auth = () => {
         >
           <Menu.Items className="absolute right-0 w-56 mt-8 origin-top-right bg-white divide-y ring-black rounded-md shadow-lg ring-1   ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
-              <Menu.Item as='div' className="px-4 py-2 text-lg text-gray-700 flex gap-4">
+              <Menu.Item onClick={()=>Router.push('/signin')} as='div' className="px-4 py-2 text-lg text-gray-700 flex gap-4 cursor-pointer">
                 <LoginIcon className="w-7 h-7"/>
                 Авторизация
               </Menu.Item>
-              <Menu.Item as='div' className="flex px-4 py-2 text-lg text-gray-700 gap-4">
+              <Menu.Item onClick={()=>Router.push('/signup')} as='div' className="flex px-4 py-2 text-lg text-gray-700 gap-4 cursor-pointer">
                 <UserAddIcon className="w-7 h-7"/>
                 Регистрация
               </Menu.Item>
