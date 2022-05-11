@@ -51,8 +51,8 @@ const MenuMobile = (props:IProps) => {
               </Menu.Item>
             ))}
 
-            <Menu.Item>{({ active }) => <Cart />}</Menu.Item>
-            <Menu.Item>{({ active }) => <Auth />}</Menu.Item>
+            <Menu.Item> <Cart /></Menu.Item>
+            <Menu.Item> <Auth /></Menu.Item>
           </Menu.Items>
         </>
       )}
